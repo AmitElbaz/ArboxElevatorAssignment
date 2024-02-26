@@ -1,0 +1,25 @@
+<div class="container">
+
+    <h3 class="Center title">Elevator Exercise</h3>
+
+    <div class="row m-0 p-0 Center">
+        <form>
+            <div class="mt-2">
+                <label class="label-style" for="numberOfFloors">Number of Floors:</label>
+                <input class="input-style form-control d-inline" type="number" id="numberOfFloors" [(ngModel)]="numberOfFloors" 
+                    name="numberOfFloors" min="1" max="100" required>
+            </div>
+
+            <div class="mt-2">
+                <label class="label-style" for="numberOfElevators">Number of Elevators:</label>
+                <input class="input-style form-control d-inline" type="number" [(ngModel)]="numberOfElevators" id="numberOfElevators"
+                    name="numberOfElevators" min="1" max="20" required>
+            </div>
+        </form>
+
+        <div class="floors-warper">
+            <app-floors [numberOfFloors]="numberOfFloors" [numberOfElevators]="numberOfElevators"></app-floors>
+        </div>
+
+    </div>
+</div>

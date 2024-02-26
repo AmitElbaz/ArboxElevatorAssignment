@@ -1,0 +1,7 @@
+<div class="container Center">
+    <div class="row m-0 p-0">   
+        @for (floor of floors; track floor;let  i = $index) {
+            <app-floor [floorId]="floor" [numberOfElevators]="numberOfElevators"></app-floor>               
+        }
+    </div>
+</div>

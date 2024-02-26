@@ -1,0 +1,28 @@
+
+<div class="container Center">
+    <div class="row">   
+        <div class="floor-dscription-warper ml-3">
+            <p class="bold pt-4">{{GetFloorDescription()}}</p>
+        </div>
+
+        @for (elevator of elevators; track elevator;let  i = $index) {
+            @if(floorId == 0){                       
+                <div id="{{floorId}}.{{elevator}}" class="col cell">
+                    <div class="col elevator pt-2" >
+                        <app-elevator [elevatorId]="i"></app-elevator>                       
+                    </div>
+                </div>
+              } 
+              @else { 
+                <div id="{{floorId}}.{{elevator}}" class="col cell"></div>
+              }                          
+        }
+
+        <div class="floor-button-warper col-2">
+            <app-floor-button [floorId]="floorId"></app-floor-button>
+        </div>
+        
+    </div>
+</div>
+
+
