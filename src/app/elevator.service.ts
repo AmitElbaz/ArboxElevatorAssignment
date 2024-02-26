@@ -65,10 +65,6 @@ export class ElevatorService {
 
   //#region Private Methods
 
-  private ShowStopwatch(requestedFloor:number,elevatorNo:number){
-    const callButton = document.getElementById(requestedFloor.toString() + "." + elevatorNo.toString()) as HTMLElement;
-  }
-
   private GetElevatorCall():number {        
     return this.elevatorCallsQueue.pop();
   }
